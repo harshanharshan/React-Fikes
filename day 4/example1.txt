@@ -1,0 +1,15 @@
+import react  from 'react';
+import Login from './Login';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
+function Sample(){
+        return(
+          <div className='Sample'>
+            <Router>
+              <Routes>
+                <Route path='/Login' element={<Login/>}></Route>
+              </Routes>
+            </Router>
+          </div>
+        )
+}
+export default Sample;

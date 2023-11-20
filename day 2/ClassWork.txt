@@ -1,0 +1,58 @@
+1. displaying pass or fail
+
+
+import PassMessage from './PassMessage';
+import FailMessage from './FailMessage';
+
+function App(props) {
+  const isPass=props.isPass;
+  if(isPass)
+  {
+    return <PassMessage />;
+  }
+  return <FailMessage />;
+};
+
+export default App;
+function PassMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    paddingTop:'260px',
+                    paddingBottom:'500px',
+                    fontSize: '75px',
+                    textAlign: 'center',
+                    color: 'white',
+                    backgroundColor:'green'
+                }
+            }>Congratulations!!!you passed the test.</h1>
+        </div>
+    )
+}
+export default PassMessage
+function FailMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    textAlign: "center",
+                    color: "black",
+                    backgroundColor:'red',
+                    fontSize:'50px',
+                    height:'1000px',
+                    paddingTop:'260px'
+                }
+            }
+        >you failed the test.Better luck next time..!!</h1>    
+        </div>
+    )
+}
+export default FailMessage
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(<App isPass={false} />,
+  document.getElementById('root'));

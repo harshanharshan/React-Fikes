@@ -1,0 +1,29 @@
+import React from 'react';
+import StyledButton from './components/StyledButton';
+function App()
+{
+  return(
+    <div>
+     <center><StyledButton style={{
+      paddingTop:'50px',
+      paddingBottom:'50px',
+      paddingLeft:'50px',
+      paddingRight:'50px'
+     }}>Click</StyledButton></center>
+    </div>
+  );
+}
+export default App;
+
+
+import styled from "styled-components";
+ const StyledButton=styled.button
+ `
+ color:red;
+ background-color:green;
+ &:hover{
+    color:white;
+    background-color:lightblue;
+ }
+ `
+ export default StyledButton;

@@ -1,0 +1,45 @@
+1. subscribe button clicking
+
+import PassMessage from './PassMessage';
+import FailMessage from './FailMessage';
+import React from 'react';
+class App extends React.Component{
+  render()
+  {
+    return(
+      <div>
+        <PassMessage/>
+      </div>
+    );
+  }
+}
+export default App;
+
+import React from 'react';
+class PassMessage extends React.Component
+{
+    constructor()
+    {
+        super()
+        this.state={
+            message:'WELCOME VISITOR'
+        }
+    }
+    changeMessage()
+    {
+        this.setState({
+            message:'changed message'
+        })
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1><center>{this.state.message}</center></h1><br></br><br></br>
+                <center><button onClick={()=>this.changeMessage()}>Subscribe</button></center>
+                
+             </div>
+        );
+    }
+}
+export default PassMessage;

@@ -1,0 +1,22 @@
+import React from 'react';
+function App()
+{
+    const fruits=[
+      {id:1,name:"Apple"},
+      {id:2,name:"Orange"},
+      {id:3,name:"Grape"}
+    ]  
+  return (
+    <div>
+      <ul>
+        {
+          fruits.map((fruit,index)=>(
+            <li key={index} id={index}>{fruit.name}</li>
+          ))
+        }
+      </ul>
+    </div>
+  )
+  
+}
+export default App;

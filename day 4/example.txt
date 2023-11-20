@@ -1,0 +1,26 @@
+import React from 'react';
+import App from './App';
+class PassMessage extends React.Component{
+    constructor()
+    {
+        super()
+        this.state={
+            message:'Dark Mode'
+        }
+    }
+    changemessage()
+    {
+        this.setState({
+                   message:'Light Mode'
+        })
+    }
+    render(){
+        return (
+            <div>
+                <h1>{this.state.message}</h1>
+                <button onClick= {()=>this.changemessage()}>Switch Thme</button>
+            </div>
+        )
+    }
+}
+export default PassMessage;
